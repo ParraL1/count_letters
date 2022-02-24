@@ -3,26 +3,11 @@
 #Github user: ParraL1
 #Description: counts the number of letters entered
 
-
 def count_letters(string):
-    result = {}
-
-
-    for x in string.upper():
-
-
-        if (x>='A' and x<='Z'):
-
-
-            if not result.get(x):
-
-
-                result[x] = 1
-            else:
-
-                result[x] += 1
-                return result
-
-
-
-
+    your_dict={}
+    for i in string.upper():
+        if i in your_dict:
+            your_dict[i] += 1
+        else:
+            your_dict[i] = 1
+    return your_dict
